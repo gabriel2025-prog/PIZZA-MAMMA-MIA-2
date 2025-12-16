@@ -1,0 +1,25 @@
+# React + Vite
+
+Esta plantilla proporciona una configuración básica para que React funcione en Vite con HMR y algunas reglas de ESLint.
+
+Actualmente, hay dos plugins oficiales disponibles:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) usa [Babel](https://babeljs.io/) (o [oxc](https://oxc.rs) cuando se usa en [rolldown-vite](https://vite.dev/guide/rolldown)) para actualización rápida.
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) usa [SWC](https://swc.rs/) para actualización rápida.
+
+## Compilador de React
+
+El compilador de React no está habilitado en esta plantilla debido a su impacto en el rendimiento de desarrollo y compilación. Para añadirlo, consulta [esta documentación](https://react.dev/learn/react-compiler/installation).
+
+## Ampliación de la configuración de ESLint
+
+Si estás desarrollando una aplicación de producción, te recomendamos usar TypeScript con las reglas de lint con reconocimiento de tipos habilitadas. Consulta la [plantilla TS](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) para obtener información sobre cómo integrar TypeScript y [`typescript-eslint`](https://typescript-eslint.io) en tu proyecto.
+
+
+
+Hito 3:Resumen de cambios principales:
+
+✅ Home.jsx: Ahora usa .map() para iterar sobre el array pizzas
+✅ CardPizza.jsx: Usa .map() para renderizar cada ingrediente en un <li>
+✅ Cart.jsx: Muestra el carrito con botones para aumentar/disminuir cantidades
+✅ App.jsx: Renderiza Home por defecto (puedes comentarlo y descomentar Cart para verlo)
