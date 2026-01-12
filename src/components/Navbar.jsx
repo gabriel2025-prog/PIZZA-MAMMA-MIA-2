@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { formatPrice } from '../utils/formatPrice';
 
 const Navbar = () => {
@@ -10,34 +11,34 @@ const Navbar = () => {
       <div className="container-fluid">
         <div className="d-flex align-items-center gap-3">
           <span className="navbar-brand mb-0 h1">Pizzería Mamma Mia!</span>
-          <button className="btn btn-outline-light">
+          <Link to="/" className="btn btn-outline-light">
             🍕 Home
-          </button>
+          </Link>
         </div>
         
         <div className="d-flex gap-2">
           {token ? (
             <>
-              <button className="btn btn-outline-light">
+              <Link to="/profile" className="btn btn-outline-light">
                 🔓 Profile
-              </button>
+              </Link>
               <button className="btn btn-outline-light">
                 🔒 Logout
               </button>
             </>
           ) : (
             <>
-              <button className="btn btn-outline-light">
+              <Link to="/login" className="btn btn-outline-light">
                 🔐 Login
-              </button>
-              <button className="btn btn-outline-light">
+              </Link>
+              <Link to="/register" className="btn btn-outline-light">
                 🔐 Register
-              </button>
+              </Link>
             </>
           )}
-          <button className="btn btn-primary">
+          <Link to="/cart" className="btn btn-primary">
             🛒 Total: ${formatPrice(total)}
-          </button>
+          </Link>
         </div>
       </div>
     </nav>
